@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store with Coupons</title>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Store with Coupons</h1>
+    </header>
+    <main>
+        <section id="balance-section">
+            <h2>Your Coupon Balance: $<span id="coupon-balance">0</span></h2>
+        </section>
+        <section id="product-list" class="product-list"></section>
+        <section id="sell-section">
+            <h2>Sell a New Product</h2>
+            <form id="sell-form" class="sell-form">
+                <div class="form-group">
+                    <label for="product-name">Product Name:</label>
+                    <select id="product-name" required>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="product-quantity">Quantity:</label>
+                    <input type="number" id="product-quantity" required />
+                </div>
+                <button type="submit">Sell Product</button>
+            </form>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
